@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nike Shoe Inventory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Nike Shoe Inventory</h1>
+
+    <!-- Product Form -->
+    <form id="product-form">
+      <input type="text" id="name" placeholder="Model Name" required />
+      <input type="number" id="quantity" placeholder="Stock" required />
+      <input type="number" id="price" placeholder="Price" required />
+      <input type="text" id="category" placeholder="Category" required />
+      <input type="text" id="description" placeholder="Description" />
+      <button type="submit">Add Shoe</button>
+    </form>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search by name or category..." />
+      <button id="search-btn">Search</button>
+    </div>
+
+    <!-- Product Table -->
+    <table id="product-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Model Name</th>
+          <th>Stock</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <h2>Edit Shoe</h2>
+      <form id="edit-form">
+        <input type="hidden" id="edit-id" />
+        <input type="text" id="edit-name" placeholder="Model Name" required />
+        <input type="number" id="edit-quantity" placeholder="Stock" required />
+        <input type="number" id="edit-price" placeholder="Price" required />
+        <input type="text" id="edit-category" placeholder="Category" required />
+        <input type="text" id="edit-description" placeholder="Description" />
+        <button type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Search Results Modal -->
+  <div id="search-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-search" class="close-button">&times;</span>
+      <h2>Search Results</h2>
+      <div id="search-results-container"></div>
+    </div>
+  </div>
+
+  <!-- Status Update Modal -->
+  <div id="status-modal" class="modal">
+    <div class="modal-content" id="status-modal-content">
+      <span id="close-status" class="close-button">&times;</span>
+      <!-- Dynamic status content will be injected here -->
+    </div>
+  </div>
+
+  <!-- JS File -->
+  <script src="main.js"></script>
+</body>
+</html>
